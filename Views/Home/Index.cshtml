@@ -1,0 +1,55 @@
+﻿@model List<Products>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row mb-5">
+    <h1 class="display-4">Welcome</h1>
+    <div class="col">
+        <a class="btn btn-primary" asp-controller="Home" asp-action="Create">New Product</a>
+    </div>
+
+    <div class="col">
+
+    </div>
+
+   
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Created At</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var product in Model)
+        {
+            <tr>
+
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Brand</td>
+                <td>@product.Category</td>
+                <td>@product.Price</td>
+                <td><img src="/Products/@product.ImageFileName" width="100"/></td>
+                <td>@product.CreatedAt.ToString("MM/dd/yyyy")</td>
+                <td style="white-space:nowrap">
+                    <a class="btn btn-primary btn-sm" asp-controller="Products" asp-action="Edit" asp-asp-route="@product.Id"">Edit</a>
+                    <a class="btn btn-primary btn-sm" asp-controller="Products" asp-action="Delete" asp-asp-route="@product.Id"">Delete</a>
+
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
