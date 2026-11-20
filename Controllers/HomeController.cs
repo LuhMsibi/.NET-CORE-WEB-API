@@ -26,6 +26,22 @@ public class HomeController : Controller
         return View();
     }
 
+    //POST METHOD TO SUBMIT THE FORM DATA
+    [HttpPost]
+    public IActionResult Create(ProductDto productDto)
+    {
+      if(productDto.ImageFile == null)
+        {
+            ModelState.AddModelError("ImageFile", "Please select an image file.");
+           
+        }
+        if(!ModelState.IsValid)
+        {
+            return View(productDto);
+        }
+        return RedirectToAction("Index", "Home");
+    }
+
 
 
     public IActionResult Privacy()

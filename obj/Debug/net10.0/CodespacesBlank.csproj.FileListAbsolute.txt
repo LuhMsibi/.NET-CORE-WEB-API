@@ -140,3 +140,4 @@
 /workspaces/codespaces-blank/CodespacesBlank/bin/Debug/net10.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
 /workspaces/codespaces-blank/CodespacesBlank/obj/Debug/net10.0/CodespacesBlank.csproj.AssemblyReference.cache
 /workspaces/codespaces-blank/CodespacesBlank/obj/Debug/net10.0/Codespac.9FA90B12.Up2Date
+/workspaces/codespaces-blank/CodespacesBlank/obj/Debug/net10.0/CodespacesBlank.sourcelink.json
